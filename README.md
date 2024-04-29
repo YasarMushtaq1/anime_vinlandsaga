@@ -1,16 +1,9 @@
-# anime_vinlandsaga
+# VinlandSaga
 
 A new Flutter project.
 
-## Getting Started
+# Figma Demo
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![demo_page-0003](https://github.com/YasarMushtaq1/anime_vinlandsaga/assets/124120950/431bb134-dbc4-4804-a4d7-d266c519362f)
+![demo_page-0001](https://github.com/YasarMushtaq1/anime_vinlandsaga/assets/124120950/05053f19-a54a-4de7-a08e-26710b1c96cb)
+![demo_page-0002](https://github.com/YasarMushtaq1/anime_vinlandsaga/assets/124120950/50b0e3fa-4dfa-4877-8d93-d02ca7ba34b5)
