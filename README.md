@@ -13,7 +13,7 @@ Contains the main Dart files.
 #### main.dart
 Entry point of the application.
 
-#### screens
+##### screens
 Contains different screens of the application.
 
 - **welcome screens**: Welcome page.
@@ -27,7 +27,7 @@ Contains different screens of the application.
   - Actor page: Displays actors of the animation.
   - Stuff page: Displays role players.
 
-#### widgets
+##### widgets
 Contains reusable widgets used across the application.
 
 - **bottom navigation**: Navigation routing among all the main screens.
