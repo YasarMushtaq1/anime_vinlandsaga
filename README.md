@@ -2,19 +2,19 @@
 
 VinlandSaga is a Flutter project aimed at introducing the anime series Vinland Saga. It provides various screens for users to explore details about the anime, its cast, leave notes, comments, and stay updated with the latest news.
 
-## Project Structure
+# Project Structure
 
-### assets
-Contains all the required assets for the project.
+## assets
+- Contains all the required assets for the project.
 
-### lib
-Contains the main Dart files.
+## lib
+- Contains the main Dart files.
 
 #### main.dart
-Entry point of the application.
+- Entry point of the application.
 
-##### screens
-Contains different screens of the application.
+#### screens
+- Contains different screens of the application.
 
 - **welcome screens**: Welcome page.
 - **main screens**:
@@ -27,7 +27,7 @@ Contains different screens of the application.
   - Actor page: Displays actors of the animation.
   - Stuff page: Displays role players.
 
-##### widgets
+#### widgets
 Contains reusable widgets used across the application.
 
 - **bottom navigation**: Navigation routing among all the main screens.
