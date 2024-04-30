@@ -8,8 +8,6 @@ VinlandSaga is a Flutter project aimed at introducing the anime series Vinland S
 - Contains all the required assets for the project.
 
 ## lib
-- Contains the main Dart files.
-
 #### main.dart
 - Entry point of the application.
 
