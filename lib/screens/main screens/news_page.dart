@@ -31,50 +31,50 @@ class NewsPage extends StatelessWidget {
             username: 'Yasar Mushtaq',
             time: '2 hours ago',
             text: 'Vinland Saga Season 2 Trailer Released: Fans Eager for the Epic Norse Adventure to Continue!',
-            imageAsset: 'assets/images/news/news1.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro1.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news1.jpg', 
+            avatarAsset: 'assets/images/avatars/pro1.jpg', 
           ),
           _buildNewsCard(
             username: 'Kair7sky',
             time: '1 day ago',
             text: 'New Character Revealed in Vinland Saga Season 2 Teaser: What Role Will They Play?',
-            imageAsset: 'assets/images/news/news2.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro4.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news2.jpg', 
+            avatarAsset: 'assets/images/avatars/pro4.jpg', 
           ),
           _buildNewsCard(
             username: 'Dony',
             time: '3 days ago',
             text: 'Vinland Saga Manga Hits Major Milestone: Celebrating 100 Chapters of Viking Glory.',
-            imageAsset: 'assets/images/news/news3.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro2.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news3.jpg', 
+            avatarAsset: 'assets/images/avatars/pro2.jpg', 
           ),
           _buildNewsCard(
             username: 'Anurbek',
             time: '4 days ago',
             text: 'Vinland Saga Nominated for Best Anime Adaptation Award: Recognition for its Stunning Animation and Compelling Storytelling!',
-            imageAsset: 'assets/images/news/news4.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro3.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news4.jpg', 
+            avatarAsset: 'assets/images/avatars/pro3.jpg', 
           ),
           _buildNewsCard(
             username: 'Vinland Saga Official',
             time: '5 days ago',
             text: 'Vinland Saga Mobile Game Announced: Players Can Embark on Viking Expeditions on Their Phones!',
-            imageAsset: 'assets/images/news/news5.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro7.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news5.jpg', 
+            avatarAsset: 'assets/images/avatars/pro7.jpg', 
           ),
           _buildNewsCard(
             username: 'The Viking Glory',
             time: '6 days ago',
             text: 'Vinland Saga Merchandise Line Launches: From Apparel to Collectibles, Fans Can Now Show Their Viking Pride!',
-            imageAsset: 'assets/images/news/news6.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro6.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news6.jpg', 
+            avatarAsset: 'assets/images/avatars/pro6.jpg', 
           ),
           _buildNewsCard(
             username: 'Aldiyar',
             time: '1 week ago',
             text: 'Vinland Saga OST Released: Immerse Yourself in the Epic Soundtrack of the Viking Saga!',
-            imageAsset: 'assets/images/news/news7.jpg', // Replace with actual asset path
-            avatarAsset: 'assets/images/avatars/pro5.jpg', // Replace with actual asset path
+            imageAsset: 'assets/images/news/news7.jpg', 
+            avatarAsset: 'assets/images/avatars/pro5.jpg', 
           ),
         ],
       ),
@@ -193,7 +193,6 @@ class _NewsCardState extends State<NewsCard> {
                   )
                 : const SizedBox.shrink(),
             const SizedBox(height: 8.0),
-            // Add like, comment, share buttons here if needed
           ],
         ),
       ),

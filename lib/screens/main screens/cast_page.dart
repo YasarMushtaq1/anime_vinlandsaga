@@ -92,14 +92,11 @@ class CastMember {
   final String role;
   final String originalImageAsset;
   final String roleImageAsset;
-  // Add more properties as needed
-
   CastMember({
     required this.name,
     required this.role,
     required this.originalImageAsset,
     required this.roleImageAsset,
-    // Add more properties as needed
   });
 }
 

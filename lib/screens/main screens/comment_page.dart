@@ -31,25 +31,25 @@ class CommentPage extends StatelessWidget {
             username: 'Yasar Mushtaq',
             time: '2 hours ago',
             text:
-                'Vinland Saga Season 2 Animation Teaser Dropped: Fans Excited to Dive Back into the Stunning Norse Visuals!', // Replace with actual asset path
+                'Vinland Saga Season 2 Animation Teaser Dropped: Fans Excited to Dive Back into the Stunning Norse Visuals!', 
             avatarAsset:
-                'assets/images/avatars/pro1.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro1.jpg', 
           ),
           _buildNewsCard(
             username: 'Kair7sky',
             time: '1 day ago',
             text:
-                'New Animation Style Unveiled in Vinland Saga Season 2 Teaser: How Will it Enhance the Epic Tale?', // Replace with actual asset path
+                'New Animation Style Unveiled in Vinland Saga Season 2 Teaser: How Will it Enhance the Epic Tale?', 
             avatarAsset:
-                'assets/images/avatars/pro4.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro4.jpg', 
           ),
           _buildNewsCard(
             username: 'Dony',
             time: '3 days ago',
             text:
-                'Vinland Saga Animation Team Celebrates 100 Episodes: Commemorating the Artistic Journey of Viking Glory.', // Replace with actual asset path
+                'Vinland Saga Animation Team Celebrates 100 Episodes: Commemorating the Artistic Journey of Viking Glory.', 
             avatarAsset:
-                'assets/images/avatars/pro2.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro2.jpg', 
           ),
           _buildNewsCard(
             username: 'Anurbek',
@@ -57,7 +57,7 @@ class CommentPage extends StatelessWidget {
             text:
                 'Vinland Saga Animation Recognized for Best Visuals: Commending the Detailed Artistry and Fluid Motion!', // Replace with actual asset path
             avatarAsset:
-                'assets/images/avatars/pro3.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro3.jpg', 
           ),
           _buildNewsCard(
             username: 'Vinland Saga Official',
@@ -81,31 +81,31 @@ class CommentPage extends StatelessWidget {
             text:
                 'Vinland Saga Animation Soundtrack Released: Immerse Yourself in the Epic Musical Journey of the Viking Saga!',
             avatarAsset:
-                'assets/images/avatars/pro5.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro5.jpg', 
           ),
           _buildNewsCard(
             username: 'Yasar Mushtaq',
             time: '2 hours ago',
             text:
-                'Vinland Saga Season 2 Animation Teaser Dropped: Fans Excited to Dive Back into the Stunning Norse Visuals!', // Replace with actual asset path
+                'Vinland Saga Season 2 Animation Teaser Dropped: Fans Excited to Dive Back into the Stunning Norse Visuals!',
             avatarAsset:
-                'assets/images/avatars/pro1.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro1.jpg', 
           ),
           _buildNewsCard(
             username: 'Kair7sky',
             time: '1 day ago',
             text:
-                'New Animation Style Unveiled in Vinland Saga Season 2 Teaser: How Will it Enhance the Epic Tale?', // Replace with actual asset path
+                'New Animation Style Unveiled in Vinland Saga Season 2 Teaser: How Will it Enhance the Epic Tale?', 
             avatarAsset:
-                'assets/images/avatars/pro4.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro4.jpg', 
           ),
           _buildNewsCard(
             username: 'Dony',
             time: '3 days ago',
             text:
-                'Vinland Saga Animation Team Celebrates 100 Episodes: Commemorating the Artistic Journey of Viking Glory.', // Replace with actual asset path
+                'Vinland Saga Animation Team Celebrates 100 Episodes: Commemorating the Artistic Journey of Viking Glory.',
             avatarAsset:
-                'assets/images/avatars/pro2.jpg', // Replace with actual asset path
+                'assets/images/avatars/pro2.jpg', 
           ),
         ],
       ),

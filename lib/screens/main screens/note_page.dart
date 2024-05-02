@@ -206,7 +206,7 @@ class _NotePageState extends State<NotePage> {
                   );
                 },
               ),
-              const SizedBox(height: 80.0), // Add extra space at the bottom for FAB
+              const SizedBox(height: 80.0), 
             ],
           ),
         ),
