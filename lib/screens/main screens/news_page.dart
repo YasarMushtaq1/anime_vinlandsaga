@@ -1,20 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:vinlandsaga_pro/widgets/news/news_feed.dart';
+import 'package:vinlandsaga_pro/widgets/news/new_news.dart'; 
+import 'package:firebase_messaging/firebase_messaging.dart';
 
-class NewsPage extends StatelessWidget {
-  const NewsPage({super.key});
+class NewsScreen extends StatefulWidget {
+  // ignore: use_super_parameters
+  const NewsScreen({Key? key}) : super(key: key);
 
-  
+  @override
+  State<NewsScreen> createState() => _NewsScreenState();
+}
+
+class _NewsScreenState extends State<NewsScreen> {
+  void setupPushNotifications() async {
+    final fcm = FirebaseMessaging.instance;
+    await fcm.requestPermission();
+    fcm.subscribeToTopic('News');
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setupPushNotifications();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('News Feed'),
+        title: const Text('News'), // Updated title
         actions: [
           IconButton(
-            icon: const Icon(
-              Icons.newspaper, 
-              color: Color.fromARGB(255, 82, 29, 0),), onPressed: () {},
+            onPressed: () {
+            },
+            icon: Icon(
+              Icons.newspaper,
+              color: Theme.of(context).colorScheme.primary,
+            ),
           ),
         ],
         shape: Border(
@@ -24,175 +46,14 @@ class NewsPage extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(8.0),
-        children: <Widget>[
-          _buildNewsCard(
-            username: 'Yasar Mushtaq',
-            time: '2 hours ago',
-            text: 'Vinland Saga Season 2 Trailer Released: Fans Eager for the Epic Norse Adventure to Continue!',
-            imageAsset: 'assets/images/news/news1.jpg', 
-            avatarAsset: 'assets/images/avatars/pro1.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'Kair7sky',
-            time: '1 day ago',
-            text: 'New Character Revealed in Vinland Saga Season 2 Teaser: What Role Will They Play?',
-            imageAsset: 'assets/images/news/news2.jpg', 
-            avatarAsset: 'assets/images/avatars/pro4.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'Dony',
-            time: '3 days ago',
-            text: 'Vinland Saga Manga Hits Major Milestone: Celebrating 100 Chapters of Viking Glory.',
-            imageAsset: 'assets/images/news/news3.jpg', 
-            avatarAsset: 'assets/images/avatars/pro2.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'Anurbek',
-            time: '4 days ago',
-            text: 'Vinland Saga Nominated for Best Anime Adaptation Award: Recognition for its Stunning Animation and Compelling Storytelling!',
-            imageAsset: 'assets/images/news/news4.jpg', 
-            avatarAsset: 'assets/images/avatars/pro3.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'Vinland Saga Official',
-            time: '5 days ago',
-            text: 'Vinland Saga Mobile Game Announced: Players Can Embark on Viking Expeditions on Their Phones!',
-            imageAsset: 'assets/images/news/news5.jpg', 
-            avatarAsset: 'assets/images/avatars/pro7.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'The Viking Glory',
-            time: '6 days ago',
-            text: 'Vinland Saga Merchandise Line Launches: From Apparel to Collectibles, Fans Can Now Show Their Viking Pride!',
-            imageAsset: 'assets/images/news/news6.jpg', 
-            avatarAsset: 'assets/images/avatars/pro6.jpg', 
-          ),
-          _buildNewsCard(
-            username: 'Aldiyar',
-            time: '1 week ago',
-            text: 'Vinland Saga OST Released: Immerse Yourself in the Epic Soundtrack of the Viking Saga!',
-            imageAsset: 'assets/images/news/news7.jpg', 
-            avatarAsset: 'assets/images/avatars/pro5.jpg', 
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildNewsCard({
-    required String username,
-    required String time,
-    required String text,
-    required String imageAsset,
-    required String avatarAsset,
-  }) {
-    return NewsCard(
-      username: username,
-      time: time,
-      text: text,
-      imageAsset: imageAsset,
-      avatarAsset: avatarAsset,
-    );
-  }
-}
-
-class NewsCard extends StatefulWidget {
-  final String username;
-  final String time;
-  final String text;
-  final String imageAsset;
-  final String avatarAsset;
-
-  const NewsCard({
-    required this.username,
-    required this.time,
-    required this.text,
-    required this.imageAsset,
-    required this.avatarAsset,
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _NewsCardState createState() => _NewsCardState();
-}
-
-class _NewsCardState extends State<NewsCard> {
-  bool _isLiked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8.0),
-      elevation: 0.0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        side: BorderSide(color: Colors.grey.shade300, width: 1.0),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: const SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage(widget.avatarAsset),
-                ),
-                const SizedBox(width: 8.0),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        widget.username,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        widget.time,
-                        style: const TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      _isLiked = !_isLiked;
-                    });
-                  },
-                  icon: Icon(
-                    _isLiked ? Icons.favorite : Icons.favorite_border,
-                    color: _isLiked ? Colors.red : Colors.grey,
-                  ),
-                ),
-              ],
+          children: [
+            SizedBox(height: 10), // Add some spacing from top
+            NewNews(), // Updated widget reference
+            Expanded(
+              child: NewsFeed(),
             ),
-            const SizedBox(height: 8.0),
-            Text(
-              widget.text,
-              style: const TextStyle(fontSize: 16.0),
-            ),
-            const SizedBox(height: 8.0),
-            widget.imageAsset.isNotEmpty
-                ? ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      widget.imageAsset,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: 200.0,
-                    ),
-                  )
-                : const SizedBox.shrink(),
-            const SizedBox(height: 8.0),
           ],
         ),
       ),
