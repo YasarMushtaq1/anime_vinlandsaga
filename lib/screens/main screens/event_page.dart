@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:vinlandsaga_pro/widgets/cast/cast_feed.dart';
-import 'package:vinlandsaga_pro/widgets/cast/cast_new.dart'; // Updated import
+import 'package:vinlandsaga_pro/widgets/calendar/event_feed.dart';
+import 'package:vinlandsaga_pro/widgets/calendar/new_event.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import '../../widgets/tabbar_navigation.dart';
 
-class CastPage extends StatefulWidget {
+class EventScreen extends StatefulWidget {
   // ignore: use_super_parameters
-  const CastPage({Key? key}) : super(key: key);
+  const EventScreen({Key? key}) : super(key: key);
 
   @override
-  State<CastPage> createState() => _CastPageState();
+  State<EventScreen> createState() => _EventScreenState();
 }
 
-class _CastPageState extends State<CastPage> {
+class _EventScreenState extends State<EventScreen> {
   void setupPushNotifications() async {
     final fcm = FirebaseMessaging.instance;
     await fcm.requestPermission();
-    fcm.subscribeToTopic('Cast');
+    fcm.subscribeToTopic('Events');
   }
 
   @override
@@ -29,20 +28,14 @@ class _CastPageState extends State<CastPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cast'), // Updated title
+        title: const Text('Events'), // Updated title
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      const AppBarNavigation(), // Replace AppBarNavigation with your desired class name
-                ),
-              );
+              //
             },
             icon: Icon(
-              Icons.group,
+              Icons.event,
               color: Theme.of(context).colorScheme.primary,
             ),
           ),
@@ -58,9 +51,9 @@ class _CastPageState extends State<CastPage> {
         child: Column(
           children: [
             SizedBox(height: 10), // Add some spacing from top
-            CastNew(), // Updated widget reference
+            NewEvent(), // Updated widget reference
             Expanded(
-              child: CastFeed(),
+              child: EventFeed(),
             ),
           ],
         ),

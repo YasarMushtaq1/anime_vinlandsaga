@@ -1,10 +1,13 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 class Main extends StatefulWidget {
   const Main({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MainState createState() => _MainState();
 }
 
@@ -38,12 +41,13 @@ class _MainState extends State<Main> {
         title: const Text('Vinland Saga'),
         actions: [
           IconButton(
-            icon: const Icon(
-              Icons.home,
-              color: Color.fromARGB(255, 82, 29, 0),
-              size: 30,
+            onPressed: ()  async {
+              await FirebaseAuth.instance.signOut();
+            },
+            icon: Icon(
+              Icons.logout,
+              color: Theme.of(context).colorScheme.primary,
             ),
-            onPressed: () {},
           ),
         ],
         shape: const Border(
@@ -72,7 +76,8 @@ class _MainState extends State<Main> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
                       child: Text(
                         'Series Official Trailer',
                         style: TextStyle(
@@ -95,7 +100,8 @@ class _MainState extends State<Main> {
                         });
                       },
                       child: Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 5),
                         child: AspectRatio(
                           aspectRatio: _controller.value.aspectRatio,
                           child: Stack(
@@ -109,7 +115,7 @@ class _MainState extends State<Main> {
                                   right: 10,
                                   child: Row(
                                     mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       IconButton(
                                         icon: Icon(
@@ -133,19 +139,21 @@ class _MainState extends State<Main> {
                                         child: Slider(
                                           value: _sliderValue,
                                           min: 0,
-                                          max: totalDuration.inSeconds.toDouble(),
+                                          max: totalDuration.inSeconds
+                                              .toDouble(),
                                           onChanged: (value) {
                                             setState(() {
                                               _sliderValue = value;
-                                              _controller.seekTo(
-                                                  Duration(seconds: value.toInt()));
+                                              _controller.seekTo(Duration(
+                                                  seconds: value.toInt()));
                                             });
                                           },
                                         ),
                                       ),
                                       Text(
                                         '${currentPosition.inMinutes}:${(currentPosition.inSeconds % 60).toString().padLeft(2, '0')}',
-                                        style: const TextStyle(color: Colors.white),
+                                        style: const TextStyle(
+                                            color: Colors.white),
                                       ),
                                     ],
                                   ),
@@ -161,7 +169,7 @@ class _MainState extends State<Main> {
             ),
             const SizedBox(height: 16),
             // Tab bar for movie description and details
-            Expanded(
+            const Expanded(
               child: DefaultTabController(
                 length: 2,
                 child: Column(
@@ -178,7 +186,6 @@ class _MainState extends State<Main> {
                           SingleChildScrollView(
                             padding: EdgeInsets.all(16.0),
                             child: Column(
-                              
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -205,14 +212,16 @@ class _MainState extends State<Main> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Product of:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -229,14 +238,16 @@ class _MainState extends State<Main> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Director:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -253,14 +264,16 @@ class _MainState extends State<Main> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Release Date:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -277,14 +290,16 @@ class _MainState extends State<Main> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Genres:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -301,14 +316,16 @@ class _MainState extends State<Main> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Number of Seasons:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -325,14 +342,16 @@ class _MainState extends State<Main> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.symmetric(vertical: 8.0),
+                                    padding:
+                                        EdgeInsets.symmetric(vertical: 8.0),
                                     child: Row(
                                       children: [
                                         Expanded(
                                           child: Text(
                                             'Ranking:',
                                             style: TextStyle(
-                                              color: Color.fromARGB(255, 82, 29, 0),
+                                              color: Color.fromARGB(
+                                                  255, 82, 29, 0),
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -371,4 +390,3 @@ class _MainState extends State<Main> {
     _controller.dispose();
   }
 }
-//final 
