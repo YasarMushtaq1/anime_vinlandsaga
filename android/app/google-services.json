@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "832872727596",
+    "project_id": "animepro-f76b1",
+    "storage_bucket": "animepro-f76b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832872727596:android:52b53a7872d7f9532a3d89",
+        "android_client_info": {
+          "package_name": "com.example.anime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8PzMTfk7q6EMnzap3u5sWAJkmRa0pHpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832872727596:android:dffe78c2830c836b2a3d89",
+        "android_client_info": {
+          "package_name": "com.example.vinlandsaga_pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8PzMTfk7q6EMnzap3u5sWAJkmRa0pHpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832872727596:android:c3979a9535303c6b2a3d89",
+        "android_client_info": {
+          "package_name": "com.vinlandsaga.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8PzMTfk7q6EMnzap3u5sWAJkmRa0pHpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
