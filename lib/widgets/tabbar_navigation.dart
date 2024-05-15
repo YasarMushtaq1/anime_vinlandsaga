@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../screens/side screens/actors.dart';
 import '../screens/side screens/stuff.dart';
-import 'botton_navigation.dart';
 
 class AppBarNavigation extends StatefulWidget {
+  // ignore: use_super_parameters
   const AppBarNavigation({Key? key}) : super(key: key);
 
   @override
@@ -16,8 +16,8 @@ class _AppBarNavigationState extends State<AppBarNavigation> {
 
   // List of screens corresponding to each tab
   final List<Widget> _screens = [
-    const ActorsPage(),
-    const StuffPage(),
+    const Actorcreen(),
+    const StuffScreen(),
   ];
 
   @override
@@ -28,17 +28,6 @@ class _AppBarNavigationState extends State<AppBarNavigation> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Cast'),
-          actions: [
-            IconButton(
-            icon: const Icon(Icons.exit_to_app, color: Color.fromARGB(255, 82, 29, 0),),
-            onPressed: () {
-              Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const Bottom()),
-            );// Navigate to search page
-            },
-          ),
-          ],
           bottom: TabBar(
             labelColor: const Color.fromARGB(255, 82, 29, 0),
             tabs: const [
@@ -56,4 +45,3 @@ class _AppBarNavigationState extends State<AppBarNavigation> {
     );
   }
 }
-//final 

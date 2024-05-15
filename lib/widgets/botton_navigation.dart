@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import '../screens/main screens/note_page.dart';
+import '../screens/main screens/event_page.dart';
 import '../screens/main screens/main_page.dart';
 import '../screens/main screens/cast_page.dart';
 import '../screens/main screens/comment_page.dart';
 import '../screens/main screens/news_page.dart';
 
 class Bottom extends StatefulWidget {
+  // ignore: use_super_parameters
   const Bottom({Key? key}) : super(key: key);
 
   @override
@@ -19,9 +20,9 @@ class _BottomState extends State<Bottom> {
   List<Widget> screens = [
     const Main(),
     const CastPage(),
-    const NotePage(),
-    const CommentPage(),
-    const NewsPage()
+    const EventScreen(),
+    const CommentScreen(),
+    const NewsScreen()
   ];
 
   @override
@@ -33,7 +34,7 @@ class _BottomState extends State<Bottom> {
         icons: const [
           Icons.home,
           Icons.group,
-          Icons.add,
+          Icons.event,
           Icons.comment,
           Icons.newspaper,
         ],
@@ -52,4 +53,3 @@ class _BottomState extends State<Bottom> {
     );
   }
 }
-//final 

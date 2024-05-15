@@ -1,5 +1,5 @@
-import 'package:anime_vinlandsaga/screens/auth.dart';
-import 'package:anime_vinlandsaga/screens/splash.dart';
+import 'package:vinlandsaga_pro/screens/auth.dart';
+import 'package:vinlandsaga_pro/screens/splash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
